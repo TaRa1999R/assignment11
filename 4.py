@@ -1,4 +1,4 @@
-                       # RUG
+                       # RUG 🥰🤢🥶👾🤬 / 🖤🤎💜💙💚💛🧡❤🤍/⚫🟤🟣🔵🟢🟡🟠🔴⚪/⬛🟫🟪🟦🟩🟨🟧🟥⬜
 
 print (" RUG ")
 print (" If your entered number is ODD , a rug will be printed ")
@@ -7,7 +7,7 @@ def rug ( size ) :
     Emoji_list = []
     Rug = []
 
-    number_of_emojis = ( int ( size / 2 )) + 1                         #daryaftemoji b tedad morede niaz 
+    number_of_emojis = ( int ( size / 2 )) + 1                                #daryaftemoji b tedad morede niaz 
     for i in range ( number_of_emojis ) :
         emoji = input (" Please enter an emoji : ")
         Emoji_list.append ( emoji )
@@ -19,19 +19,16 @@ def rug ( size ) :
         Rug.append ( Rug_line )
 
     center = int ( ( size - 1 ) / 2 )
-    Rug [ center ][ center ] = Emoji_list [ 0 ]
+    Rug [ center ][ center ] = Emoji_list [ 0 ]                               #markaz qali
 
-    for i in range ( 1 , center + 1 ) :
-        
-
-
-
-
-
+    for n in range ( 1 , center + 1 ) :                                       #sakht qali
+        for i in range ( -n , n + 1 ) :
+            for j in range ( -n , n + 1 ) :
+                if Rug [ center + i ][ center + j ] == "_" :
+                    Rug [ center + i ][ center + j ] = Emoji_list [ n ]
 
 
-
-    for row in Rug :                                                   #print rug
+    for row in Rug :                                                          #chap qali
         for column in row :
             print ( column , end = " ")
         print ("")
