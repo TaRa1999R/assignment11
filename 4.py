@@ -5,14 +5,36 @@ print (" If your entered number is ODD , a rug will be printed ")
 
 def rug ( size ) :
     Emoji_list = []
-    Rug_line = []
     Rug = []
-    varity = 1
 
-    number_of_emojis = ( int ( size / 2 )) + 1
+    number_of_emojis = ( int ( size / 2 )) + 1                         #daryaftemoji b tedad morede niaz 
     for i in range ( number_of_emojis ) :
         emoji = input (" Please enter an emoji : ")
         Emoji_list.append ( emoji )
+    
+    for row in range ( size ) :
+        Rug_line = []
+        for column in range ( size ) :
+            Rug_line.append ("_")
+        Rug.append ( Rug_line )
+
+    center = int ( ( size - 1 ) / 2 )
+    Rug [ center ][ center ] = Emoji_list [ 0 ]
+
+    for i in range ( 1 , center + 1 ) :
+        
+
+
+
+
+
+
+
+
+    for row in Rug :                                                   #print rug
+        for column in row :
+            print ( column , end = " ")
+        print ("")
     
 
 
