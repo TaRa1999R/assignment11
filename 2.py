@@ -44,6 +44,7 @@ class Time :
         result = Time ( result_s , result_m , result_h )
         return result
 
+    @staticmethod
     def second_to_time ( second ) :
         if second >= 3600 :
             hour = int ( second / 3600 )
@@ -60,10 +61,10 @@ class Time :
         second = ( self.h * 3600 ) + ( self.m * 60 ) + self.s
         return second
     
-    def GMT_to_TEH ( other ) :
-        other.h += 4
-        other.m += 30
-        result = Time ( other.s , other.m , other.h)
+    def GMT_to_TEH ( self ) :
+        self.h += 4
+        self.m += 30
+        result = Time ( self.s , self.m , self.h)
         return result
 
 
@@ -89,5 +90,5 @@ g = f.sub ( a )
 g.show ()
 
 gmt = Time ( 00 , 30 , 10)
-teh = Time.GMT_to_TEH ( gmt )
+teh = gmt.GMT_to_TEH () 
 teh.show ()
